@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5 {
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    color: $light-blue;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+
+h1,.h1 { font-size: 2.488em; }
+h2,.h2 { font-size: 2.074em; }
+h3,.h3 { font-size: 1.728em; }
+h4,.h4 { font-size: 1.44em; }
+h5,.h5 { font-size: 1.2em; }
+
+p {
+    margin: 0px;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    color: $light-blue;
+
+    // Sizes
+    &.large {
+        font-size: 1.5em;
+    }
+
+    // Alignment
+    &.text-center {
+        text-align: center;
+    }
+
+    &.text-left {
+        text-align: left;
+    }
+
+    &.text-right {
+        text-align: right;
+    }
+}

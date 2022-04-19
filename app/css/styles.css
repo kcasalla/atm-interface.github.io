@@ -1,3 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+.hide {
+  display: none;
+}
+
+button {
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  padding: 16px 0px;
+  width: 350px;
+  border-radius: 5px;
+  background-color: #5398BE;
+  border: 1px solid #5398BE;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+button:active {
+  background-color: #4581A2;
+  border: 1px solid #4581A2;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+  font-family: "Rubik", sans-serif;
+  color: #5398BE;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+h1, .h1 {
+  font-size: 2.488em;
+}
+
+h2, .h2 {
+  font-size: 2.074em;
+}
+
+h3, .h3 {
+  font-size: 1.728em;
+}
+
+h4, .h4 {
+  font-size: 1.44em;
+}
+
+h5, .h5 {
+  font-size: 1.2em;
+}
+
+p {
+  margin: 0px;
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+  color: #5398BE;
+}
+p.large {
+  font-size: 1.5em;
+}
+p.text-center {
+  text-align: center;
+}
+p.text-left {
+  text-align: left;
+}
+p.text-right {
+  text-align: right;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 body {
-  background-color: pink;
+  font-size: 16px;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #CCCCCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#screen {
+  width: 940px;
+  height: 752px;
+  background-color: #140F2D;
+}
+#screen #welcome-screen {
+  position: relative;
+}
+#screen #welcome-screen #bank-logo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+}
+#screen #welcome-screen #bank-logo img {
+  width: 280px;
+}
+#screen #welcome-screen #welcome-text {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+}
+#screen #initial-screen #bank-logo {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+#screen #initial-screen #bank-logo img {
+  width: 100px;
+}
+#screen #initial-screen #main-content {
+  height: 75vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+#screen #initial-screen #main-content div {
+  padding: 100px 30px;
+}
+#screen #initial-screen #main-content div button {
+  margin-bottom: 32px;
+}
+#screen #initial-screen #main-content div button:last-of-type {
+  margin-bottom: 0px;
+}
+#screen #initial-screen #main-content div:first-child {
+  border-right: 1px solid #5398BE;
 }

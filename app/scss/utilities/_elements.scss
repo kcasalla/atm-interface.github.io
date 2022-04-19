@@ -1,0 +1,17 @@
+// Button
+button {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    padding: 16px 0px;
+    width: 350px;
+    border-radius: 5px;
+    background-color: $light-blue;
+    border: 1px solid $light-blue;
+    color: $white;
+    cursor: pointer;
+
+    &:active {
+        background-color: #4581A2;
+        border: 1px solid #4581A2;
+    }
+}
