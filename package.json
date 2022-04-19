@@ -1,0 +1,24 @@
+{
+  "name": "atm-interface.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcasalla/atm-interface.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kcasalla/atm-interface.github.io/issues"
+  },
+  "homepage": "https://github.com/kcasalla/atm-interface.github.io#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.50.1"
+  }
+}
