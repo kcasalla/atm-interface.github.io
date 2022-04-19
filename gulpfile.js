@@ -1,9 +1,4 @@
 const gulp = require('gulp');
-
-// gulp.task('hello', async function() {
-//     console.log('hello');
-// });
-
 const sass = require('gulp-sass')(require('sass'));
 
 function buildStyles() {
@@ -12,7 +7,9 @@ function buildStyles() {
     .pipe(gulp.dest('app/css'));
 }
 
-exports.buildStyles = buildStyles;
-exports.watch = function () {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
+function watch() {
+    gulp.watch('app/scss/**/*.scss', buildStyles);
 }
+
+exports.buildStyles = buildStyles;
+exports.watch = watch;
