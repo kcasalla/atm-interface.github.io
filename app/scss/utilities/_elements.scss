@@ -15,3 +15,25 @@ button {
         border: 1px solid #4581A2;
     }
 }
+
+// Form
+form {
+    label {
+        font-size: 1em;
+        line-height: 1.5em;
+        font-family: 'Lato', sans-serif;
+        color: $light-blue;
+    }
+
+    input[type=text],
+    input[type=password], {
+        width: 100%;
+        font-family: 'Rubik', sans-serif;
+        font-size: 1em;
+        padding: 16px;
+        margin-top: 8px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 2px solid $gray;
+    }
+}

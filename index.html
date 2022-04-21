@@ -10,28 +10,310 @@
 
     <body>
         <section id="screen">
+            <!-- welcome screen -->
             <article id="welcome-screen" class="hide">
                 <div id="bank-logo">
                     <img src="app/images/logo.png" alt="bank-logo">
                 </div>
-                <p id="welcome-text" class="large text-center">Welcome, please insert card to begin transaction</p>
+                <p id="welcome-text" class="large text-center">
+                    Welcome, please insert card to begin transaction
+                </p>
             </article>
 
-            <article id="initial-screen" class="">
-                <div id="bank-logo">
-                    <img src="app/images/logo.png" alt="bank-logo">
-                </div>
-                <div id="main-content">
-                    <div>
-                        <p class="text-right large">Please select amount you want to withdraw from your account</p>
+            <!-- initial screen -->
+            <article id="initial-screen" class="hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
                     </div>
-                    <div>
-                        <button>Cash Withdrawal</button>
-                        <button>Balance Inquiry</button>
-                        <button>Change PIN</button>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please select amount you want to withdraw from your account
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>Cash Withdrawal</button>
+                            <button>Balance Inquiry</button>
+                            <button>Change PIN</button>
+                        </div>
                     </div>
                 </div>
             </article>
+
+            <!-- account option screen -->
+            <article id="account-option-screen" class="hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please press the proper keys for your desired account
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>Savings</button>
+                            <button>Current</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- cash withdrawal -->
+            <!-- exact-amount -->
+            <article id="cash-withdrawal-screen" class="exact-amount hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please select amount you want to withdraw from your account
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>P500</button>
+                            <button>P1500</button>
+                            <button>P3000</button>
+                            <button>P5000</button>
+                        </div>
+                        <div class="content">
+                            <button>P1000</button>
+                            <button>P2000</button>
+                            <button>P4000</button>
+                            <button>Other Amount</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- enter-amount -->
+            <article id="cash-withdrawal-screen" class="enter-amount hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please enter amount you want to withdraw from your account
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <form>
+                                <label for="amount">
+                                    Type amount here
+                                </label>
+                                <input type="text" id="amount" name="amount" placeholder="P0">
+                            </form>
+                            <p>
+                                Please press “ENTER” key in the key pad when your done
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- disclaimer -->
+            <article id="cash-withdrawal-screen" class="disclaimer hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            ATM will charge a fee of P15.00 in addition to fees that may be charged in your bank.</br>
+                            Would you like to proceed?
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>Yes</button>
+                            <button>No</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Balance inqury -->
+            <!-- Show amount -->
+            <article id="balance-inquiry-screen" class="show-amount ">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Here’s your balance information
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <p>Available balance</p>
+                            <div class="available-amount">
+                                P25,000
+                            </div>
+                            <button>Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Universal -->
+            <!-- Receipt option -->
+            <article id="universal-screen" class="receipt hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Do you want to print receipt?
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>Yes</button>
+                            <button>No</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- enter-pin -->
+            <article id="universal-screen" class="enter-pin hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please enter your PIN</br>
+                            Use your hand to cover the key pad when typing your PIN
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <form>
+                                <label for="amount">
+                                    Type PIN here
+                                </label>
+                                <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                            </form>
+                            <p>
+                                Please press “ENTER” key in the key pad when your done
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Transaction option -->
+            <article id="universal-screen" class="transaction-option hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Do you have other transactions?
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>Yes</button>
+                            <button>No</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Transaction processing -->
+            <article id="message-screen" class="transaction-processing hide">
+                <div class="grid layout-one">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <h1 class="h2">
+                                Processing your transactions…
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Transaction successful -->
+            <article id="message-screen" class="transaction-successful hide">
+                <div class="grid layout-one">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <h1 class="h2">
+                                Transaction complete</br>
+                                Please collect your money
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Transaction failed -->
+            <article id="message-screen" class="transaction-failed hide">
+                <div class="grid layout-one">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <h1 class="h2">
+                                Transaction failed</br>
+                                Your balance is insufficient
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Transaction done -->
+            <article id="message-screen" class="transaction-done hide">
+                <div class="grid layout-one">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <h1 class="h2">
+                                Please get your card</br>
+                                Thank you for using PIGGY BANK
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Receipt printing -->
+            <article id="message-screen" class="receipt-printing hide">
+                <div class="grid layout-one">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <h1 class="h2">
+                                Please get your receipt…
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
         </section>
     </body>
 </html>

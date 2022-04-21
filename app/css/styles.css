@@ -4,6 +4,64 @@
   display: none;
 }
 
+.grid.layout-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 130px 500px;
+  grid-template-areas: "head head" "main main";
+}
+.grid.layout-one .head {
+  grid-area: head;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.grid.layout-one .head img {
+  width: 100px;
+}
+.grid.layout-one .main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+}
+.grid.layout-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 130px 500px;
+  grid-template-areas: "head head" "aside main";
+}
+.grid.layout-two .head {
+  grid-area: head;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.grid.layout-two .head img {
+  width: 100px;
+}
+.grid.layout-two .aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  border-right: 1px solid #5398BE;
+  padding: 30px;
+}
+.grid.layout-two .main {
+  grid-area: main;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 30px;
+}
+.grid.layout-two .main button {
+  margin-bottom: 32px;
+}
+.grid.layout-two .main button:last-of-type {
+  margin-bottom: 0px;
+}
+
 button {
   font-family: "Rubik", sans-serif;
   font-size: 1em;
@@ -18,6 +76,24 @@ button {
 button:active {
   background-color: #4581A2;
   border: 1px solid #4581A2;
+}
+
+form label {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: "Lato", sans-serif;
+  color: #5398BE;
+}
+form input[type=text],
+form input[type=password] {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  padding: 16px;
+  margin-top: 8px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid #CCCCCC;
 }
 
 h1, h2, h3, h4, h5 {
@@ -51,6 +127,7 @@ h5, .h5 {
 p {
   margin: 0px;
   font-size: 1em;
+  line-height: 1.5em;
   font-family: "Lato", sans-serif;
   color: #5398BE;
 }
@@ -115,28 +192,21 @@ body {
   bottom: 20%;
   width: 100%;
 }
-#screen #initial-screen #bank-logo {
-  padding-top: 20px;
-  padding-left: 20px;
+#screen #cash-withdrawal-screen.exact-amount button {
+  width: 180px;
 }
-#screen #initial-screen #bank-logo img {
-  width: 100px;
+#screen #cash-withdrawal-screen.enter-amount #main-action .content, #screen #cash-withdrawal-screen.enter-pin #main-action .content {
+  width: 100%;
 }
-#screen #initial-screen #main-content {
-  height: 75vh;
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(2, 1fr);
+#screen #cash-withdrawal-screen.enter-amount #main-action .content form, #screen #cash-withdrawal-screen.enter-pin #main-action .content form {
+  margin-bottom: 72px;
 }
-#screen #initial-screen #main-content div {
-  padding: 100px 30px;
-}
-#screen #initial-screen #main-content div button {
-  margin-bottom: 32px;
-}
-#screen #initial-screen #main-content div button:last-of-type {
-  margin-bottom: 0px;
-}
-#screen #initial-screen #main-content div:first-child {
-  border-right: 1px solid #5398BE;
+#screen #balance-inquiry-screen.show-amount .available-amount {
+  margin: 8px 0px 72px 0px;
+  color: #5398BE;
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  padding: 16px;
+  border: 1px solid #5398BE;
+  border-radius: 5px;
 }
