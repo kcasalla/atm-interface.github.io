@@ -210,3 +210,12 @@ body {
   border: 1px solid #5398BE;
   border-radius: 5px;
 }
+#screen #pin-code-screen.old-pin #main-action .content, #screen #pin-code-screen.new-pin #main-action .content {
+  width: 100%;
+}
+#screen #pin-code-screen.old-pin #main-action .content form, #screen #pin-code-screen.new-pin #main-action .content form {
+  margin-bottom: 72px;
+}
+#screen #pin-code-screen.new-pin form > div {
+  margin-bottom: 32px;
+}

@@ -92,4 +92,23 @@ body {
             }
         }
     }
+
+    #pin-code-screen {
+        &.old-pin,
+        &.new-pin {
+            #main-action .content {
+                width: 100%;
+
+                form {
+                    margin-bottom: 72px;
+                }
+            }
+        }
+
+        &.new-pin {
+            form > div {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }

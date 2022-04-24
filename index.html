@@ -140,7 +140,7 @@
 
             <!-- Balance inqury -->
             <!-- Show amount -->
-            <article id="balance-inquiry-screen" class="show-amount ">
+            <article id="balance-inquiry-screen" class="show-amount hide">
                 <div class="grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -157,6 +157,71 @@
                                 P25,000
                             </div>
                             <button>Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Change pin -->
+            <!-- Add old pin -->
+            <article id="pin-code-screen" class="old-pin hide">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please enter your old PIN</br>
+                            Use your hand to cover the key pad when typing your PIN
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <form>
+                                <label for="amount">
+                                    Type old PIN here
+                                </label>
+                                <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                            </form>
+                            <p>
+                                Please press “ENTER” key in the key pad when your done
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Add new pin -->
+            <article id="pin-code-screen" class="new-pin ">
+                <div class="grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please enter your new PIN</br>
+                            Use your hand to cover the key pad when typing your PIN
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <form>
+                                <div>
+                                    <label for="amount">
+                                        Type new PIN here
+                                    </label>
+                                    <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                                </div>
+                                <div>
+                                    <label for="amount">
+                                        Confirm new  PIN here
+                                    </label>
+                                    <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                                </div>
+                            </form>
+                            <p>
+                                Please press “ENTER” key in the key pad when your done
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -183,7 +248,7 @@
                 </div>
             </article>
 
-            <!-- enter-pin -->
+            <!-- enter pin -->
             <article id="universal-screen" class="enter-pin hide">
                 <div class="grid layout-two">
                     <div id="bank-logo" class="head">
@@ -313,7 +378,6 @@
                     </div>
                 </div>
             </article>
-            
         </section>
     </body>
 </html>
