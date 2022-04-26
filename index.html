@@ -6,22 +6,28 @@
 		<title>ATM interface</title>
 
         <link rel="stylesheet" href="app/css/styles.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="app/js/jquery.js"></script>
+        <script src="app/js/jquery.functions.js"></script>
 	</head>
 
     <body>
         <section id="screen">
             <!-- welcome screen -->
-            <article id="welcome-screen" class="hide">
-                <div id="bank-logo">
-                    <img src="app/images/logo.png" alt="bank-logo">
+            <article id="welcome-screen">
+                <div class="grid layout-one">
+                    <div id="bank-logo">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <p id="welcome-text" class="large text-center">
+                        Welcome, please insert card to begin transaction
+                    </p>
                 </div>
-                <p id="welcome-text" class="large text-center">
-                    Welcome, please insert card to begin transaction
-                </p>
             </article>
 
             <!-- initial screen -->
-            <article id="initial-screen" class="hide">
+            <article id="initial-screen">
                 <div class="grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -33,17 +39,18 @@
                     </div>
                     <div id="main-action" class="main">
                         <div class="content">
-                            <button>Cash Withdrawal</button>
-                            <button>Balance Inquiry</button>
-                            <button>Change PIN</button>
+                            <button id="cash-withdrawal-button">Cash Withdrawal</button>
+                            <button id="balance-inquiry-button">Balance Inquiry</button>
+                            <button id="change-pin-button">Change PIN</button>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <!-- account option screen -->
-            <article id="account-option-screen" class="hide">
-                <div class="grid layout-two">
+            <!-- cash withdrawal -->
+            <article id="cash-withdrawal-screen" class="main-option">
+                <!-- account option screen -->
+                <div class="account-option-screen grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -54,17 +61,14 @@
                     </div>
                     <div id="main-action" class="main">
                         <div class="content">
-                            <button>Savings</button>
-                            <button>Current</button>
+                            <button class="savings-button">Savings</button>
+                            <button class="current-button">Current</button>
                         </div>
                     </div>
                 </div>
-            </article>
-
-            <!-- cash withdrawal -->
-            <!-- exact-amount -->
-            <article id="cash-withdrawal-screen" class="exact-amount hide">
-                <div class="grid layout-two">
+                
+                <!-- enter-amount -->
+                <div class="exact-amount grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -88,11 +92,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- enter-amount -->
-            <article id="cash-withdrawal-screen" class="enter-amount hide">
-                <div class="grid layout-two">
+                <!-- exact-amount -->
+                <div class="enter-amount grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -115,11 +117,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- disclaimer -->
-            <article id="cash-withdrawal-screen" class="disclaimer hide">
-                <div class="grid layout-two">
+                <!-- disclaimer -->
+                <div class="disclaimer grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -139,9 +139,27 @@
             </article>
 
             <!-- Balance inqury -->
-            <!-- Show amount -->
-            <article id="balance-inquiry-screen" class="show-amount hide">
-                <div class="grid layout-two">
+            <article id="balance-inquiry-screen" class="main-option">
+                <!-- account option screen -->
+                <div class="account-option-screen grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Please press the proper keys for your desired account
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button class="savings-button">Savings</button>
+                            <button class="current-button">Current</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Show amount -->
+                <div class="show-amount grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -164,8 +182,9 @@
 
             <!-- Change pin -->
             <!-- Add old pin -->
-            <article id="pin-code-screen" class="old-pin hide">
-                <div class="grid layout-two">
+            <article id="pin-code-screen" class="main-option">
+                <!-- Add old pin -->
+                <div class="old-pin grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -181,7 +200,7 @@
                                 <label for="amount">
                                     Type old PIN here
                                 </label>
-                                <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                                <input type="password" id="old-pin" name="old-pin" placeholder="PIN HERE">
                             </form>
                             <p>
                                 Please press “ENTER” key in the key pad when your done
@@ -189,11 +208,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- Add new pin -->
-            <article id="pin-code-screen" class="new-pin ">
-                <div class="grid layout-two">
+                <!-- Add new pin -->
+                <div class="new-pin grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -210,13 +227,13 @@
                                     <label for="amount">
                                         Type new PIN here
                                     </label>
-                                    <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                                    <input type="password" id="new-pin" name="new-pin" placeholder="PIN HERE">
                                 </div>
                                 <div>
                                     <label for="amount">
                                         Confirm new  PIN here
                                     </label>
-                                    <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                                    <input type="password" id="confirm-new-pin" name="confirm-new-pin" placeholder="PIN HERE">
                                 </div>
                             </form>
                             <p>
@@ -229,7 +246,7 @@
 
             <!-- Universal -->
             <!-- Receipt option -->
-            <article id="universal-screen" class="receipt hide">
+            <article id="universal-screen" class="receipt">
                 <div class="grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -249,7 +266,7 @@
             </article>
 
             <!-- enter pin -->
-            <article id="universal-screen" class="enter-pin hide">
+            <article id="universal-screen" class="enter-pin">
                 <div class="grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -266,7 +283,7 @@
                                 <label for="amount">
                                     Type PIN here
                                 </label>
-                                <input type="password" id="amount" name="amount" placeholder="PIN HERE">
+                                <input type="password" id="pin" name="amount" placeholder="PIN HERE">
                             </form>
                             <p>
                                 Please press “ENTER” key in the key pad when your done
@@ -277,7 +294,7 @@
             </article>
 
             <!-- Transaction option -->
-            <article id="universal-screen" class="transaction-option hide">
+            <article id="universal-screen" class="transaction-option">
                 <div class="grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -297,7 +314,7 @@
             </article>
 
             <!-- Transaction processing -->
-            <article id="message-screen" class="transaction-processing hide">
+            <article id="message-screen" class="transaction-processing">
                 <div class="grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -313,7 +330,7 @@
             </article>
 
             <!-- Transaction successful -->
-            <article id="message-screen" class="transaction-successful hide">
+            <article id="message-screen" class="transaction-successful">
                 <div class="grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -330,7 +347,7 @@
             </article>
 
             <!-- Transaction failed -->
-            <article id="message-screen" class="transaction-failed hide">
+            <article id="message-screen" class="transaction-failed">
                 <div class="grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -347,7 +364,7 @@
             </article>
 
             <!-- Transaction done -->
-            <article id="message-screen" class="transaction-done hide">
+            <article id="message-screen" class="transaction-done">
                 <div class="grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -364,7 +381,7 @@
             </article>
 
             <!-- Receipt printing -->
-            <article id="message-screen" class="receipt-printing hide">
+            <article id="message-screen" class="receipt-printing">
                 <div class="grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
@@ -377,6 +394,35 @@
                         </div>
                     </div>
                 </div>
+            </article>
+        </section>
+
+        <section id="actions">
+            <article id="card-insert">
+                <div id="card" class="">
+                    <p class="text-center">Click To Insert Card</p>
+                </div>
+            </article>
+            <article id="keypad">
+                <a href="" class="one">1</a>
+                <a href="" class="two">2</a>
+                <a href="" class="three">3</a>
+                <a href="" class="cancel">Cancel</a>
+
+                <a href="" class="four">4</a>
+                <a href="" class="five">5</a>
+                <a href="" class="six">6</a>
+                <a href="" class="clear">Clear</a>
+
+                <a href="" class="seven">7</a>
+                <a href="" class="eight">8</a>
+                <a href="" class="nine">9</a>
+                <a href="" class="enter">Enter</a>
+
+                <a href="" class=""></a>
+                <a href="" class="zero">0</a>
+                <a href="" class=""></a>
+                <a href="" class=""></a>
             </article>
         </section>
     </body>

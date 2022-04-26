@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
-.hide {
-  display: none;
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 .grid.layout-one {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -172,7 +176,9 @@ body {
 #screen {
   width: 940px;
   height: 752px;
+  border-radius: 16px;
   background-color: #140F2D;
+  margin-right: 48px;
 }
 #screen #welcome-screen {
   position: relative;
@@ -218,4 +224,64 @@ body {
 }
 #screen #pin-code-screen.new-pin form > div {
   margin-bottom: 32px;
+}
+
+#actions {
+  width: 300px;
+}
+#actions #card-insert {
+  background-color: #bdbdbd;
+  height: 50px;
+  border-radius: 24px;
+  position: relative;
+  padding: 30px;
+}
+#actions #card-insert > #card {
+  background-color: #140F2D;
+  border-radius: 0px 0px 8px 8px;
+  padding: 10px;
+  height: 100px;
+  position: relative;
+  transition: all 0.3s;
+}
+#actions #card-insert > #card > p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: #F26363;
+}
+#actions #card-insert > #card.insert {
+  transition: all 0.3s;
+  height: 40px;
+}
+#actions > #keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  text-align: center;
+  margin-top: 150px;
+}
+#actions > #keypad > a {
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  color: #140F2D;
+  width: 100%;
+  padding: 24px 8px;
+  text-decoration: none;
+  background-color: #bdbdbd;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+}
+#actions > #keypad > a:active {
+  color: #5398BE;
+}
+#actions > #keypad > a.cancel {
+  background-color: #d90429;
+}
+#actions > #keypad > a.clear {
+  background-color: #fcbf49;
+}
+#actions > #keypad > a.enter {
+  background-color: #2d6a4f;
 }

@@ -19,7 +19,7 @@ function watch() {
 
     gulp.watch('app/scss/**/*.scss', buildStyles);
     gulp.watch('**/*.html').on('change', browsersync.reload);
-    // gulp.watch('app/js/**/*.js', browsersync); -- for JS
+    gulp.watch('app/js/**/*.js', browsersync);
 }
 
 exports.buildStyles = buildStyles;
