@@ -88,7 +88,7 @@
                             <button>P1000</button>
                             <button>P2000</button>
                             <button>P4000</button>
-                            <button>Other Amount</button>
+                            <button class="other-amount">Other Amount</button>
                         </div>
                     </div>
                 </div>
@@ -131,8 +131,8 @@
                     </div>
                     <div id="main-action" class="main">
                         <div class="content">
-                            <button>Yes</button>
-                            <button>No</button>
+                            <button class="yes">Yes</button>
+                            <button class="no">No</button>
                         </div>
                     </div>
                 </div>
@@ -245,29 +245,9 @@
             </article>
 
             <!-- Universal -->
-            <!-- Receipt option -->
-            <article id="universal-screen" class="receipt">
-                <div class="grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Do you want to print receipt?
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button>Yes</button>
-                            <button>No</button>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- enter pin -->
-            <article id="universal-screen" class="enter-pin">
-                <div class="grid layout-two">
+            <article id="universal-screen" class="main-option">
+                <!-- enter pin -->
+                <div class="enter-pin grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -291,11 +271,27 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- Transaction option -->
-            <article id="universal-screen" class="transaction-option">
-                <div class="grid layout-two">
+                <!-- Receipt option -->
+                <div class="receipt grid layout-two">
+                    <div id="bank-logo" class="head">
+                        <img src="app/images/logo.png" alt="bank-logo">
+                    </div>
+                    <div id="text-content" class="aside">
+                        <p class="text-right large">
+                            Do you want to print receipt?
+                        </p>
+                    </div>
+                    <div id="main-action" class="main">
+                        <div class="content">
+                            <button>Yes</button>
+                            <button>No</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transaction option -->
+                <div class="transaction-option grid layout-two">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -313,9 +309,9 @@
                 </div>
             </article>
 
-            <!-- Transaction processing -->
-            <article id="message-screen" class="transaction-processing">
-                <div class="grid layout-one">
+            <article id="message-screen" class="main-option">
+                <!-- Transaction processing -->
+                <div class="transaction-processing grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -327,11 +323,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
-
-            <!-- Transaction successful -->
-            <article id="message-screen" class="transaction-successful">
-                <div class="grid layout-one">
+                
+                <!-- Transaction successful -->
+                <div class="transaction-successful grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -344,11 +338,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- Transaction failed -->
-            <article id="message-screen" class="transaction-failed">
-                <div class="grid layout-one">
+                <!-- Transaction failed -->
+                <div class="transaction-failed grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -361,11 +353,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- Transaction done -->
-            <article id="message-screen" class="transaction-done">
-                <div class="grid layout-one">
+                <!-- Transaction done -->
+                <div class="transaction-done grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -378,11 +368,9 @@
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <!-- Receipt printing -->
-            <article id="message-screen" class="receipt-printing">
-                <div class="grid layout-one">
+                <!-- Receipt printing -->
+                <div class="receipt-printing grid layout-one">
                     <div id="bank-logo" class="head">
                         <img src="app/images/logo.png" alt="bank-logo">
                     </div>
@@ -422,7 +410,7 @@
                 <a href="" class=""></a>
                 <a href="" class="zero">0</a>
                 <a href="" class=""></a>
-                <a href="" class=""></a>
+                <a href="" class="back">Back</a>
             </article>
         </section>
     </body>

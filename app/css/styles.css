@@ -198,13 +198,20 @@ body {
   bottom: 20%;
   width: 100%;
 }
-#screen #cash-withdrawal-screen.exact-amount button {
+#screen #cash-withdrawal-screen .exact-amount button,
+#screen #universal-screen .exact-amount button {
   width: 180px;
 }
-#screen #cash-withdrawal-screen.enter-amount #main-action .content, #screen #cash-withdrawal-screen.enter-pin #main-action .content {
+#screen #cash-withdrawal-screen .enter-amount #main-action .content,
+#screen #cash-withdrawal-screen .enter-pin #main-action .content,
+#screen #universal-screen .enter-amount #main-action .content,
+#screen #universal-screen .enter-pin #main-action .content {
   width: 100%;
 }
-#screen #cash-withdrawal-screen.enter-amount #main-action .content form, #screen #cash-withdrawal-screen.enter-pin #main-action .content form {
+#screen #cash-withdrawal-screen .enter-amount #main-action .content form,
+#screen #cash-withdrawal-screen .enter-pin #main-action .content form,
+#screen #universal-screen .enter-amount #main-action .content form,
+#screen #universal-screen .enter-pin #main-action .content form {
   margin-bottom: 72px;
 }
 #screen #balance-inquiry-screen.show-amount .available-amount {
@@ -284,4 +291,7 @@ body {
 }
 #actions > #keypad > a.enter {
   background-color: #2d6a4f;
+}
+#actions > #keypad > a.back {
+  background-color: #888888;
 }

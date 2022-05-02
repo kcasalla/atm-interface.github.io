@@ -1,7 +1,6 @@
 $(document).ready(function(){
     // Actions
     var insertCard = $('#actions #card');
-    var keypadOption = $('#keypad');
 
     $('#screen article').not(':first-child').hide();
     
@@ -12,37 +11,23 @@ $(document).ready(function(){
         $(this).screenTransition('#initial-screen');
     });
 
-    keypadOption.find('.cancel').click(function(e){
-        e.preventDefault();
-        $(this).screenTransition('#welcome-screen');
+    var initialScreenOptions = $('#initial-screen .content');
+    // var cashWithdrawal = $('#cash-withdrawal-screen');
 
-        insertCard.removeClass('insert');
-        insertCard.find('p').show();
-    });
+    // Cash withdrawal
+    var cashWithdrawal = $('#cash-withdrawal-button');
+    var balanceInquiry = $('#balance-inquiry-button');
+    var changePin = $('#change-pin-button');
 
-    keypadOption.find('.clear').click(function(e){
-        e.preventDefault();
-        console.log('clear');
-    });
-
-    keypadOption.find('.enter').click(function(e){
-        e.preventDefault();
-        console.log('enter');
-    });
-
-
-    // // Screens
-    var initialScreenOptions = $('#screen #initial-screen');
-
-    initialScreenOptions.find('#cash-withdrawal-button').click(function(){
-        $(this).screenTransition('#cash-withdrawal-screen', '.account-option-screen');
-    });
-
-    initialScreenOptions.find('#balance-inquiry-button').click(function(){
-        $(this).screenTransition('#balance-inquiry-screen', '.account-option-screen');
-    });
-
-    initialScreenOptions.find('#change-pin-button').click(function(){
-        $(this).screenTransition('#pin-code-screen', '.old-pin');
+    initialScreenOptions.click(function(){ 
+        if(!$(this).attr('#cash-withdrawal-button').data('clicked')) {
+            console.log('asd');
+        }
+        // else if(!$(this).find('#balance-inquiry-button').data('clicked')) {
+        //     console.log('asd');
+        // }
+        // else if(!$(this).find('#').data('clicked')) {
+        //     console.log('asd');
+        // }
     });
 });

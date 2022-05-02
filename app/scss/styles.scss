@@ -62,15 +62,16 @@ body {
         }
     }
 
-    #cash-withdrawal-screen {
-        &.exact-amount {
+    #cash-withdrawal-screen,
+    #universal-screen {
+        .exact-amount {
             button {
                 width: 180px;
             }
         }
 
-        &.enter-amount, 
-        &.enter-pin, {
+        .enter-amount, 
+        .enter-pin {
             #main-action .content {
                 width: 100%;
 
@@ -182,7 +183,10 @@ body {
 
             &.enter {
                 background-color: #2d6a4f;
-                
+            }
+
+            &.back {
+                background-color: #888888;
             }
         }
     }
