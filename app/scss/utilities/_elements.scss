@@ -25,7 +25,7 @@ form {
         color: $light-blue;
     }
 
-    input[type=text],
+    input[type=number],
     input[type=password], {
         width: 100%;
         font-family: 'Rubik', sans-serif;
@@ -35,5 +35,11 @@ form {
         border-radius: 5px;
         box-sizing: border-box;
         border: 2px solid $gray;
+    }
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }

@@ -88,7 +88,7 @@ form label {
   font-family: "Lato", sans-serif;
   color: #5398BE;
 }
-form input[type=text],
+form input[type=number],
 form input[type=password] {
   width: 100%;
   font-family: "Rubik", sans-serif;
@@ -98,6 +98,11 @@ form input[type=password] {
   border-radius: 5px;
   box-sizing: border-box;
   border: 2px solid #CCCCCC;
+}
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -173,15 +178,20 @@ body {
   align-items: center;
 }
 
-#screen {
+#screen .screen-wrapper {
   width: 940px;
   height: 752px;
   border-radius: 16px;
   background-color: #140F2D;
   margin-right: 48px;
-}
-#screen #welcome-screen {
   position: relative;
+}
+#screen #welcome-screen,
+#screen #initial-screen,
+#screen > article > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #screen #welcome-screen #bank-logo {
   display: flex;
@@ -197,10 +207,6 @@ body {
   position: absolute;
   bottom: 20%;
   width: 100%;
-}
-#screen #cash-withdrawal-screen .exact-amount button,
-#screen #universal-screen .exact-amount button {
-  width: 180px;
 }
 #screen #cash-withdrawal-screen .enter-amount #main-action .content,
 #screen #cash-withdrawal-screen .enter-pin #main-action .content,
@@ -232,44 +238,43 @@ body {
 #screen #pin-code-screen.new-pin form > div {
   margin-bottom: 32px;
 }
-
-#actions {
+#screen #actions {
   width: 300px;
 }
-#actions #card-insert {
+#screen #actions #card-insert {
   background-color: #bdbdbd;
   height: 50px;
   border-radius: 24px;
   position: relative;
   padding: 30px;
 }
-#actions #card-insert > #card {
+#screen #actions #card-insert > #card {
   background-color: #140F2D;
   border-radius: 0px 0px 8px 8px;
   padding: 10px;
   height: 100px;
   position: relative;
-  transition: all 0.3s;
+  transition: all 3s;
 }
-#actions #card-insert > #card > p {
+#screen #actions #card-insert > #card > p {
   position: absolute;
   bottom: 10px;
   left: 0;
   right: 0;
   color: #F26363;
 }
-#actions #card-insert > #card.insert {
-  transition: all 0.3s;
+#screen #actions #card-insert > #card.insert {
+  transition: all 3s;
   height: 40px;
 }
-#actions > #keypad {
+#screen #actions > #keypad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   text-align: center;
   margin-top: 150px;
 }
-#actions > #keypad > a {
+#screen #actions > #keypad > a {
   font-family: "Rubik", sans-serif;
   font-size: 1em;
   color: #140F2D;
@@ -280,18 +285,18 @@ body {
   border: 1px solid #CCCCCC;
   border-radius: 8px;
 }
-#actions > #keypad > a:active {
+#screen #actions > #keypad > a:active {
   color: #5398BE;
 }
-#actions > #keypad > a.cancel {
+#screen #actions > #keypad > a.cancel {
   background-color: #d90429;
 }
-#actions > #keypad > a.clear {
+#screen #actions > #keypad > a.clear {
   background-color: #fcbf49;
 }
-#actions > #keypad > a.enter {
+#screen #actions > #keypad > a.enter {
   background-color: #2d6a4f;
 }
-#actions > #keypad > a.back {
+#screen #actions > #keypad > a.back {
   background-color: #888888;
 }

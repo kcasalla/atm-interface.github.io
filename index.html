@@ -16,167 +16,368 @@
         <section id="screen">
             <!-- welcome screen -->
             <article id="welcome-screen">
-                <div class="grid layout-one">
-                    <div id="bank-logo">
-                        <img src="app/images/logo.png" alt="bank-logo">
+                <section class="screen-wrapper">
+                    <div class="grid layout-one">
+                        <div id="bank-logo">
+                            <img src="app/images/logo.png" alt="bank-logo">
+                        </div>
+                        <p id="welcome-text" class="large text-center">
+                            Welcome, please insert card to begin transaction
+                        </p>
                     </div>
-                    <p id="welcome-text" class="large text-center">
-                        Welcome, please insert card to begin transaction
-                    </p>
-                </div>
+                </section>
+
+                <section id="actions">
+                    <article id="card-insert">
+                        <div id="card" class="">
+                            <p class="text-center">Click To Insert Card</p>
+                        </div>
+                    </article>
+                    <article id="keypad">
+                        <a href="" class="one">1</a>
+                        <a href="" class="two">2</a>
+                        <a href="" class="three">3</a>
+                        <a href="" class="cancel">Cancel</a>
+        
+                        <a href="" class="four">4</a>
+                        <a href="" class="five">5</a>
+                        <a href="" class="six">6</a>
+                        <a href="" class="clear">Clear</a>
+        
+                        <a href="" class="seven">7</a>
+                        <a href="" class="eight">8</a>
+                        <a href="" class="nine">9</a>
+                        <a href="" class="enter">Enter</a>
+        
+                        <a href="" class=""></a>
+                        <a href="" class="zero">0</a>
+                        <a href="" class=""></a>
+                        <a href="" class="back">Back</a>
+                    </article>
+                </section>
             </article>
 
             <!-- initial screen -->
             <article id="initial-screen">
-                <div class="grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please select amount you want to withdraw from your account
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button id="cash-withdrawal-button">Cash Withdrawal</button>
-                            <button id="balance-inquiry-button">Balance Inquiry</button>
-                            <button id="change-pin-button">Change PIN</button>
+                <section class="screen-wrapper">
+                    <div class="grid layout-two">
+                        <div id="bank-logo" class="head">
+                            <img src="app/images/logo.png" alt="bank-logo">
+                        </div>
+                        <div id="text-content" class="aside">
+                            <p class="text-right large">
+                                Please select amount you want to withdraw from your account
+                            </p>
+                        </div>
+                        <div id="main-action" class="main">
+                            <div class="content">
+                                <button id="cash-withdrawal-button">Cash Withdrawal</button>
+                                <button id="balance-inquiry-button">Balance Inquiry</button>
+                                <button id="change-pin-button">Change PIN</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
+
+                <section id="actions">
+                    <article id="card-insert">
+                        <div id="card" class="">
+                            <p class="text-center">Click To Insert Card</p>
+                        </div>
+                    </article>
+                    <article id="keypad">
+                        <a href="" class="one">1</a>
+                        <a href="" class="two">2</a>
+                        <a href="" class="three">3</a>
+                        <a href="" class="cancel">Cancel</a>
+        
+                        <a href="" class="four">4</a>
+                        <a href="" class="five">5</a>
+                        <a href="" class="six">6</a>
+                        <a href="" class="clear">Clear</a>
+        
+                        <a href="" class="seven">7</a>
+                        <a href="" class="eight">8</a>
+                        <a href="" class="nine">9</a>
+                        <a href="" class="enter">Enter</a>
+        
+                        <a href="" class=""></a>
+                        <a href="" class="zero">0</a>
+                        <a href="" class=""></a>
+                        <a href="" class="back">Back</a>
+                    </article>
+                </section>
             </article>
 
             <!-- cash withdrawal -->
             <article id="cash-withdrawal-screen" class="main-option">
                 <!-- account option screen -->
-                <div class="account-option-screen grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please press the proper keys for your desired account
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button class="savings-button">Savings</button>
-                            <button class="current-button">Current</button>
+                <div class="account-option-screen">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Please press the proper keys for your desired account
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <button class="savings-button">Savings</button>
+                                    <button class="current-button">Current</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- enter-amount -->
-                <div class="exact-amount grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please select amount you want to withdraw from your account
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button>P500</button>
-                            <button>P1500</button>
-                            <button>P3000</button>
-                            <button>P5000</button>
-                        </div>
-                        <div class="content">
-                            <button>P1000</button>
-                            <button>P2000</button>
-                            <button>P4000</button>
-                            <button class="other-amount">Other Amount</button>
-                        </div>
-                    </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
 
                 <!-- exact-amount -->
-                <div class="enter-amount grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please enter amount you want to withdraw from your account
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <form>
-                                <label for="amount">
-                                    Type amount here
-                                </label>
-                                <input type="text" id="amount" name="amount" placeholder="P0">
-                            </form>
-                            <p>
-                                Please press “ENTER” key in the key pad when your done
-                            </p>
+                <div class="enter-amount">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Please enter amount you want to withdraw from your account
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <form>
+                                        <label for="amount">
+                                            Type amount here
+                                        </label>
+                                        <input type="number" id="amount" name="amount" placeholder="P0">
+                                    </form>
+                                    <p>
+                                        Please press “ENTER” key in the key pad when your done
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
 
                 <!-- disclaimer -->
-                <div class="disclaimer grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            ATM will charge a fee of P15.00 in addition to fees that may be charged in your bank.</br>
-                            Would you like to proceed?
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button class="yes">Yes</button>
-                            <button class="no">No</button>
+                <div class="disclaimer">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    ATM will charge a fee of P15.00 in addition to fees that may be charged in your bank.</br>
+                                    Would you like to proceed?
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <button class="yes">Yes</button>
+                                    <button class="no">No</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
             </article>
 
             <!-- Balance inqury -->
             <article id="balance-inquiry-screen" class="main-option">
                 <!-- account option screen -->
-                <div class="account-option-screen grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please press the proper keys for your desired account
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button class="savings-button">Savings</button>
-                            <button class="current-button">Current</button>
+                <div class="account-option-screen">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Please press the proper keys for your desired account
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <button class="savings-button">Savings</button>
+                                    <button class="current-button">Current</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
 
                 <!-- Show amount -->
-                <div class="show-amount grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Here’s your balance information
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <p>Available balance</p>
-                            <div class="available-amount">
-                                P25,000
+                <div class="show-amount">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
                             </div>
-                            <button>Continue</button>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Here’s your balance information
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <p>Available balance</p>
+                                    <div class="available-amount">
+                                        P25,000
+                                    </div>
+                                    <button>Continue</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
             </article>
 
@@ -184,63 +385,129 @@
             <!-- Add old pin -->
             <article id="pin-code-screen" class="main-option">
                 <!-- Add old pin -->
-                <div class="old-pin grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please enter your old PIN</br>
-                            Use your hand to cover the key pad when typing your PIN
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <form>
-                                <label for="amount">
-                                    Type old PIN here
-                                </label>
-                                <input type="password" id="old-pin" name="old-pin" placeholder="PIN HERE">
-                            </form>
-                            <p>
-                                Please press “ENTER” key in the key pad when your done
-                            </p>
+                <div class="old-pin">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Please enter your old PIN</br>
+                                    Use your hand to cover the key pad when typing your PIN
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <form>
+                                        <label for="amount">
+                                            Type old PIN here
+                                        </label>
+                                        <input type="password" id="old-pin" name="old-pin" placeholder="PIN HERE">
+                                    </form>
+                                    <p>
+                                        Please press “ENTER” key in the key pad when your done
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
 
                 <!-- Add new pin -->
-                <div class="new-pin grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please enter your new PIN</br>
-                            Use your hand to cover the key pad when typing your PIN
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <form>
-                                <div>
-                                    <label for="amount">
-                                        Type new PIN here
-                                    </label>
-                                    <input type="password" id="new-pin" name="new-pin" placeholder="PIN HERE">
+                <div class="new-pin">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Please enter your new PIN</br>
+                                    Use your hand to cover the key pad when typing your PIN
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <form>
+                                        <div>
+                                            <label for="amount">
+                                                Type new PIN here
+                                            </label>
+                                            <input type="password" id="new-pin" name="new-pin" placeholder="PIN HERE">
+                                        </div>
+                                        <div>
+                                            <label for="amount">
+                                                Confirm new  PIN here
+                                            </label>
+                                            <input type="password" id="confirm-new-pin" name="confirm-new-pin" placeholder="PIN HERE">
+                                        </div>
+                                    </form>
+                                    <p>
+                                        Please press “ENTER” key in the key pad when your done
+                                    </p>
                                 </div>
-                                <div>
-                                    <label for="amount">
-                                        Confirm new  PIN here
-                                    </label>
-                                    <input type="password" id="confirm-new-pin" name="confirm-new-pin" placeholder="PIN HERE">
-                                </div>
-                            </form>
-                            <p>
-                                Please press “ENTER” key in the key pad when your done
-                            </p>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
             </article>
 
@@ -248,80 +515,212 @@
             <article id="universal-screen" class="main-option">
                 <!-- enter pin -->
                 <div class="enter-pin grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Please enter your PIN</br>
-                            Use your hand to cover the key pad when typing your PIN
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <form>
-                                <label for="amount">
-                                    Type PIN here
-                                </label>
-                                <input type="password" id="pin" name="amount" placeholder="PIN HERE">
-                            </form>
-                            <p>
-                                Please press “ENTER” key in the key pad when your done
-                            </p>
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Please enter your PIN</br>
+                                    Use your hand to cover the key pad when typing your PIN
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <form>
+                                        <label for="amount">
+                                            Type PIN here
+                                        </label>
+                                        <input type="password" id="pin" name="pin" placeholder="PIN HERE">
+                                    </form>
+                                    <p>
+                                        Please press “ENTER” key in the key pad when your done
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
 
                 <!-- Receipt option -->
-                <div class="receipt grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Do you want to print receipt?
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button>Yes</button>
-                            <button>No</button>
+                <div class="receipt">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Do you want to print receipt?
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <button>Yes</button>
+                                    <button>No</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
 
                 <!-- Transaction option -->
-                <div class="transaction-option grid layout-two">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="text-content" class="aside">
-                        <p class="text-right large">
-                            Do you have other transactions?
-                        </p>
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <button>Yes</button>
-                            <button>No</button>
+                <div class="transaction-option">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-two">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="text-content" class="aside">
+                                <p class="text-right large">
+                                    Do you have other transactions?
+                                </p>
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <button>Yes</button>
+                                    <button>No</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
             </article>
 
             <article id="message-screen" class="main-option">
                 <!-- Transaction processing -->
-                <div class="transaction-processing grid layout-one">
-                    <div id="bank-logo" class="head">
-                        <img src="app/images/logo.png" alt="bank-logo">
-                    </div>
-                    <div id="main-action" class="main">
-                        <div class="content">
-                            <h1 class="h2">
-                                Processing your transactions…
-                            </h1>
+                <div class="transaction-processing">
+                    <div class="screen-wrapper">
+                        <div class="grid layout-one">
+                            <div id="bank-logo" class="head">
+                                <img src="app/images/logo.png" alt="bank-logo">
+                            </div>
+                            <div id="main-action" class="main">
+                                <div class="content">
+                                    <h1 class="h2">
+                                        Processing your transactions…
+                                    </h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <section id="actions">
+                        <article id="card-insert">
+                            <div id="card" class="">
+                                <p class="text-center">Click To Insert Card</p>
+                            </div>
+                        </article>
+                        <article id="keypad">
+                            <a href="" class="one">1</a>
+                            <a href="" class="two">2</a>
+                            <a href="" class="three">3</a>
+                            <a href="" class="cancel">Cancel</a>
+            
+                            <a href="" class="four">4</a>
+                            <a href="" class="five">5</a>
+                            <a href="" class="six">6</a>
+                            <a href="" class="clear">Clear</a>
+            
+                            <a href="" class="seven">7</a>
+                            <a href="" class="eight">8</a>
+                            <a href="" class="nine">9</a>
+                            <a href="" class="enter">Enter</a>
+            
+                            <a href="" class=""></a>
+                            <a href="" class="zero">0</a>
+                            <a href="" class=""></a>
+                            <a href="" class="back">Back</a>
+                        </article>
+                    </section>
                 </div>
                 
                 <!-- Transaction successful -->
@@ -348,7 +747,7 @@
                         <div class="content">
                             <h1 class="h2">
                                 Transaction failed</br>
-                                Your balance is insufficient
+                                <span>Your balance is insufficient</span>
                             </h1>
                         </div>
                     </div>
@@ -385,7 +784,7 @@
             </article>
         </section>
 
-        <section id="actions">
+        <!-- <section id="actions">
             <article id="card-insert">
                 <div id="card" class="">
                     <p class="text-center">Click To Insert Card</p>
@@ -412,6 +811,6 @@
                 <a href="" class=""></a>
                 <a href="" class="back">Back</a>
             </article>
-        </section>
+        </section> -->
     </body>
 </html>
