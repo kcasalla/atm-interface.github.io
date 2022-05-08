@@ -23,13 +23,6 @@ $(document).ready(function(){
 
         $('.enter-amount .enter').on('click', function(e) {
             e.preventDefault();
-            var cash = $('#amount').val();
-
-            if (cash <= 4985) {
-                console.log('sufficient funds');
-            } else if (cash >= 4985) {
-                console.log('insufficient funds');
-            }
 
             $('#universal-screen').show().siblings().hide();
             $('#universal-screen .enter-pin').show().siblings().hide();
@@ -37,13 +30,6 @@ $(document).ready(function(){
 
         $('.enter-pin .enter').on('click', function(e) {
             e.preventDefault();
-            var pinCode = $('#pin').val();
-
-            if (pinCode == 4321) {
-                console.log('correct pin');
-            } else  {
-                console.log('wrong pin');
-            }
 
             $('#cash-withdrawal-screen').show().siblings().hide();
             $('#cash-withdrawal-screen .disclaimer').show().siblings().hide();
@@ -51,24 +37,10 @@ $(document).ready(function(){
 
         $('.disclaimer .yes').on('click', function() {
             var cash = $('#amount').val();
-
-            if (cash <= 4985) {
-                console.log('sufficient funds');
-                $('#message-screen .h2').html('Processing your transactions…');
-                
-                $('#message-screen').show().siblings().hide();
-                $('#message-screen .transaction-processing').show().siblings().hide();
-            } else if (cash >= 4985) {
-                console.log('insufficient funds');
-                $('#message-screen .h2').html('Your balance is insufficient');
-
-                $('#message-screen').show().siblings().hide();
-                $('#message-screen .transaction-processing').show().siblings().hide();
-            }
-
             var pinCode = $('#pin').val();
 
-            if (pinCode == 4321) {
+            if ((cash <= 4985) && (pinCode == 4321)) {
+                console.log('sufficient funds');
                 console.log('correct pin');
 
                 $('#message-screen .h2').html('Processing your transactions…');
@@ -80,13 +52,33 @@ $(document).ready(function(){
                     $('#universal-screen').show().siblings().hide();
                     $('#universal-screen .receipt').show().siblings().hide();
                 }, 3000);
-            } else  {
+
+            } else if ((cash >= 4985) && (pinCode == 4321)) {
+                console.log('insufficient funds');
+                console.log('correct pin');
+
+                $('#message-screen .h2').html('Your balance is insufficient');
+
+                $('#message-screen').show().siblings().hide();
+                $('#message-screen .transaction-processing').show().siblings().hide();
+
+                setTimeout(function() {
+                    $('#universal-screen').show().siblings().hide();
+                    $('#universal-screen .transaction-option').show().siblings().hide();
+                }, 3000);
+            } else if (pinCode !== 4321) {
+                console.log('sufficient funds');
                 console.log('wrong pin');
 
                 $('#message-screen .h2').html('Your PIN Code is incorrect');
 
                 $('#message-screen').show().siblings().hide();
                 $('#message-screen .transaction-processing').show().siblings().hide();
+
+                setTimeout(function() {
+                    $('#universal-screen').show().siblings().hide();
+                    $('#universal-screen .transaction-option').show().siblings().hide();
+                }, 3000);
             }
         });
     });
