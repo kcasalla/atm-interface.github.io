@@ -86,7 +86,7 @@ body {
     }
 
     #balance-inquiry-screen {
-        &.show-amount {
+        .show-amount {
             .available-amount {
                 margin: 8px 0px 72px 0px;
                 color: $light-blue;

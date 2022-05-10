@@ -220,7 +220,7 @@ body {
 #screen #universal-screen .enter-pin #main-action .content form {
   margin-bottom: 72px;
 }
-#screen #balance-inquiry-screen.show-amount .available-amount {
+#screen #balance-inquiry-screen .show-amount .available-amount {
   margin: 8px 0px 72px 0px;
   color: #5398BE;
   font-family: "Rubik", sans-serif;

@@ -150,58 +150,12 @@ $(document).ready(function(){
             $('#balance-inquiry-screen .show-amount').show().siblings().hide();
         });
 
-        $('.show-amount .enter').on('click', function(e) {
+        $('.show-amount .continue-button').on('click', function(e) {
             e.preventDefault();
 
             $('#universal-screen').show().siblings().hide();
-            $('#universal-screen .receipt').show().siblings().hide();
+            $('#universal-screen .transaction-option').show().siblings().hide();
         });
-
-        // $('.disclaimer .yes').on('click', function() {
-        //     var cash = $('#amount').val();
-        //     var pinCode = $('#pin').val();
-
-        //     if ((cash <= 4985) && (pinCode == 4321)) {
-        //         console.log('sufficient funds');
-        //         console.log('correct pin');
-
-        //         $('#message-screen .h2').html('Processing your transactions…');
-
-        //         $('#message-screen').show().siblings().hide();
-        //         $('#message-screen .transaction-processing').show().siblings().hide();
-
-        //         setTimeout(function() {
-        //             $('#universal-screen').show().siblings().hide();
-        //             $('#universal-screen .receipt').show().siblings().hide();
-        //         }, 1500);
-
-        //     } else if ((cash >= 4985) && (pinCode == 4321)) {
-        //         console.log('insufficient funds');
-        //         console.log('correct pin');
-
-        //         $('#message-screen .h2').html('Your balance is insufficient');
-
-        //         $('#message-screen').show().siblings().hide();
-        //         $('#message-screen .transaction-processing').show().siblings().hide();
-
-        //         setTimeout(function() {
-        //             $('#universal-screen').show().siblings().hide();
-        //             $('#universal-screen .transaction-option').show().siblings().hide();
-        //         }, 1500);
-        //     } else if (pinCode !== 4321) {
-        //         console.log('sufficient funds');
-        //         console.log('wrong pin');
-
-        //         $('#message-screen .h2').html('Your PIN Code is incorrect');
-
-        //         $('#message-screen').show().siblings().hide();
-        //         $('#message-screen .transaction-processing').show().siblings().hide();
-
-        //         setTimeout(function() {
-        //             $('#universal-screen').show().siblings().hide();
-        //             $('#universal-screen .transaction-option').show().siblings().hide();
-        //         }, 1500);
-        //     }
-        // });
     });
+    
 });
