@@ -120,6 +120,9 @@ $(document).ready(function(){
 
         $('#initial-screen').show().siblings().hide();
         $('#initial-screen > .screen-wrapper').show();
+
+        $('input[type="number"]').val("");
+        $('input[type="password"]').val("");
     });
 
     $('.transaction-option .end-transaction').on('click', function(e) {
@@ -129,7 +132,6 @@ $(document).ready(function(){
 
         $('#message-screen').show().siblings().hide();
         $('#message-screen .transaction-processing').show().siblings().hide();
-
         setTimeout(function() {
             insertCard.removeClass('insert');
             $('#actions #card').find('p').show();
@@ -172,6 +174,21 @@ $(document).ready(function(){
         $('#message-screen').show().siblings().hide();
         $('#message-screen .transaction-processing').show().siblings().hide();
 
+        setTimeout(function() {
+            insertCard.removeClass('insert');
+            $('#actions #card').find('p').show();
+
+            $('#welcome-screen').show().siblings().hide();
+        }, 1500);
+    });
+
+    $('.disclaimer .no').on('click', function(e) {
+        e.preventDefault();
+
+        $('#message-screen .h2').html('Please get your card…');
+
+        $('#message-screen').show().siblings().hide();
+        $('#message-screen .transaction-processing').show().siblings().hide();
         setTimeout(function() {
             insertCard.removeClass('insert');
             $('#actions #card').find('p').show();
