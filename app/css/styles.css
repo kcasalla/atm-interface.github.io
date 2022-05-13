@@ -203,9 +203,15 @@ body {
 #screen #welcome-screen #bank-logo img {
   width: 280px;
 }
+#screen #welcome-screen #ad {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  font-size: 1.2em;
+}
 #screen #welcome-screen #welcome-text {
   position: absolute;
-  bottom: 20%;
+  bottom: 40%;
   width: 100%;
 }
 #screen #cash-withdrawal-screen .enter-amount #main-action .content,
