@@ -158,4 +158,32 @@ $(document).ready(function(){
         });
     });
     
+    $('#keypad .clear').on('click', function(e) {
+        e.preventDefault();
+        $('input[type="number"]').val("");
+        $('input[type="password"]').val("");
+    });
+
+    $('#keypad .cancel').on('click', function(e) {
+        e.preventDefault();
+        
+        $('#message-screen .h2').html('Please get your card…');
+
+        $('#message-screen').show().siblings().hide();
+        $('#message-screen .transaction-processing').show().siblings().hide();
+
+        setTimeout(function() {
+            insertCard.removeClass('insert');
+            $('#actions #card').find('p').show();
+
+            $('#welcome-screen').show().siblings().hide();
+        }, 1500);
+    });
+
+    // $('#keypad .back').on('click', function(e) {
+    //     e.preventDefault();
+
+    //     history.back();
+	// 	return false;
+    // });
 });
